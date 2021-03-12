@@ -47,7 +47,7 @@ input {
 }
 label{
 	text-align: center;
-	margin-left: 2%;
+	 margin-left: 2%;
 }
 
 .miniDiv {
@@ -78,15 +78,29 @@ label{
 		display: unset;
 		text-align: center;
 	}
+	
 	.divSemiGenerale{ 
 		display:flex;
 		flex-direction: column;
 		
 		}
 	.divMiniGenerale img {
-     width:80%;
+    width:95%;
+	height: 70%;
+	
 	
 	}
+	.divMiniGenerale{
+	margin-left: 5px;	
+	}
+	.miniDiv {
+		text-align: start;
+	
+		}
+		label{
+			
+			margin-left: 0%;
+		}
 	.test{
 		display: flex;
 		flex-direction: column;

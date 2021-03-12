@@ -44,8 +44,8 @@ if(isset($_POST['btn'])){
         $result=mysqli_query($connect,$query);
         header('location:authors.php');
       }
-      //  //header('location:manageAuthor.php');
-      // }
+     
+     
 
 
 

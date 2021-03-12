@@ -82,7 +82,20 @@ label {
   }
 
   .divMiniGenerale img {
-    width: 80%;
+    width: 95%;
+    height: 70%;
+  }
+
+  .divMiniGenerale {
+    margin-left: 5px;
+  }
+
+  .miniDiv {
+    text-align: start;
+  }
+
+  label {
+    margin-left: 0%;
   }
 
   .test {
