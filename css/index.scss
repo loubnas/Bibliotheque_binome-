@@ -1,0 +1,94 @@
+$COLOR : white;
+$COLOR1:#79CA7E;
+$COLOR2:black;
+body {
+	background-image: url('../images/Background.jpg') ;
+	background-size: 100vw ;
+	background-repeat: no-repeat ;
+.titlebooks {
+	color:$COLOR; 
+}
+.titleauthors {
+	color:$COLOR;
+} 
+.titlegallery {
+	color: $COLOR1;
+}
+.generalDiv {
+    margin-top: -50px ;
+	 display: flex ;
+    justify-content: center;
+	.div1 {
+        p {
+            width: 400px ;
+            line-height: 180%;
+        }
+		h2 {
+            width: 400px ;
+			margin-bottom: 50px ;
+			margin-top: 100px;
+        }
+			
+    }
+		 
+}
+	
+.div2 {
+    img {
+        width: 45vw ;
+        margin-left: 120px ;
+    }
+    
+}
+	
+.MYLIB {
+    color:$COLOR1;
+	padding-left: 15px ;
+	font-family: Palatino Linotype ;
+}
+	
+.div1 {
+    h2 {
+        font-size: 50px ;
+        margin-top: 10px ;
+    }
+    
+p {
+    font-size: 20px ;
+    margin-top: -5% ;
+    margin-left: 20px ;
+    line-height: 30px;
+}
+   
+}
+}
+@media screen and (max-width:800px){
+    body {
+        background-image: none;
+    .generalDiv {
+    flex-direction: column;
+     margin-left: 5%;   
+    }
+    .div2 {
+        img {
+            width: 300px;
+            margin-left: 12% ;
+        }
+        
+    }
+
+    .titlebooks {
+      color: $COLOR2;
+    } 
+    .titleauthors {
+      color: $COLOR2;
+    }
+    .titlegallery {
+      color:$COLOR2;
+    }
+  
+
+    
+}
+
+}

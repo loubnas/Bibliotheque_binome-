@@ -1,0 +1,93 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.iconenav {
+  display: none;
+  float: right;
+  margin: 20px 30px 0px 0px;
+  cursor: pointer;
+}
+
+header ul {
+  float: right;
+  margin-top: 10px;
+  display: block;
+  margin-right: 150px;
+}
+header img {
+  width: 200px;
+  height: 200px;
+  margin-top: -60px;
+}
+header li {
+  display: inline-block;
+  list-style: none;
+}
+header a {
+  display: inline-block;
+  margin: 30px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+header a:hover {
+  color: #2DA07A;
+}
+
+.active {
+  color: #2DA07A;
+  text-decoration: underline;
+}
+
+.myFooter {
+  background-image: url("../images/footer.png");
+  position: absolute;
+  height: 230px;
+  width: 100%;
+  background-repeat: no-repeat;
+  padding-top: 60px;
+  margin-left: -7px;
+}
+
+footer div {
+  margin-top: 18px;
+}
+footer div img {
+  margin-left: 10px;
+  width: 30px;
+}
+footer div label {
+  color: white;
+  margin-left: 10px;
+  margin-top: -15px;
+}
+
+/* Responsive*/
+@media screen and (max-width: 800px) {
+  header .iconenav {
+    display: block;
+  }
+
+  header ul {
+    float: none;
+    position: absolute;
+    width: 80%;
+    padding-left: 12%;
+    margin-top: -70px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: none;
+  }
+  header li {
+    text-align: center;
+    display: block;
+    padding: 2px;
+    background-color: #a2dac7;
+  }
+  header .menu {
+    display: block;
+  }
+}/*# sourceMappingURL=styles.css.map */

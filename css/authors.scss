@@ -1,0 +1,112 @@
+$color1:#2DA07A;
+$color2:#9ED2C1;
+$font:Forte;
+
+input[type=date], input[type=text]{
+	padding: 10px ;
+	border: 1px solid #ccc; 
+	border-radius: 4px ;
+	box-sizing: border-box; 
+	margin-top: 2px ;
+	
+}
+input[type=submit] {
+	background-color: $color1 ;
+	color: white ;
+	padding: 10px ;
+	width: 100px ;
+	border: none ;
+	border-radius: 30px; 
+	cursor: pointer ;
+	&:hover{
+	    background-color: black 
+	}
+}
+#formulaire {
+	border-radius: 50px ;
+	background-color: $color2 ;
+	padding: 40px ;
+	margin-left: 300px ;
+	margin-right: 300px ;
+	font-size: 20px ;
+	padding-left: 80px;
+}
+.btn {
+    text-align: center ;
+}
+.tform {
+	h3 {
+		text-align: center ;
+		color: $color1 ;
+		font-size: 25px ;
+		margin-bottom: 20px; 
+		font-family: $font ;
+	}
+}
+.ttable {
+	h3 {
+		text-align: center ;
+		color: $color1 ;
+		font-size: 25px ;
+		margin-top: 30px ;
+		font-family: $font;
+	}
+}
+table {
+	border-collapse: collapse ;
+	margin-left: 15% ;
+	margin-top: 20px ;
+	width: 900px ;
+    text-align: center ;
+	width: 95% ;
+	margin-left: 2% ;
+	font-size: 25px ;
+	margin-bottom: 30px;
+}
+td {
+	border: 1px solid black ;
+	padding: 30px ;
+}
+.frm {
+	display: grid ;
+	grid-template-columns: auto auto ;
+}
+.plus {
+	display: block ;
+}
+input,label {
+	margin: .2rem 0 ;
+}
+#Date_birth {
+	width: 500px ;
+}
+#fullName {
+	width: 225px;
+}
+#CIN {
+	width: 225px ;
+}
+table, th, td {
+	border: 2px solid black ;
+	border-collapse: collapse ;
+}
+th, td {
+	padding: 15px ;
+}
+th {
+	font-family: $font ;
+	background-color: $color2 ;
+}
+.icon {
+	width: 40px ;
+}
+.cover {
+	width: 60px ;
+}
+div span{
+	color:red;
+}
+
+.frm div{
+	margin-bottom: 10px;
+  }

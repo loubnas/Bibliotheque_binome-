@@ -1,0 +1,103 @@
+$color : #2DA07A;
+$color1:#a2dac7;
+
+* {
+	padding: 0px;
+	margin: 0px ; 
+}
+.iconenav {
+	display: none; 
+	float: right ;
+	margin: 20px 30px 0px 0px ;
+	cursor: pointer ;
+}
+header {
+	ul { 
+		float: right ;
+		margin-top: 10px ;
+		display: block ;
+		margin-right: 150px ; 
+    }
+	img {
+		width: 200px; 
+		height: 200px; 
+		margin-top: -60px;
+    }
+	li {
+		display:inline-block;
+		list-style: none ;
+    }
+	a {
+		display:inline-block;
+		margin: 30px ;
+		margin-top: 10px ;
+		text-decoration: none ;
+		color: black ;
+		font-size: 20px ;
+
+		&:hover {
+			color:$color ;
+        }
+    }
+
+}
+.active {
+	color: $color ;
+	text-decoration: underline ;
+}
+.myFooter {
+	background-image: url('../images/footer.png') ;
+	position: absolute ;
+	height: 230px ;
+	width: 100% ;
+	background-repeat: no-repeat ;
+	padding-top: 60px ;
+	margin-left: -7px ;
+}
+footer {
+	div {
+		margin-top: 18px ;
+		img {
+			margin-left: 10px ;
+			width: 30px; }
+		label {
+			color: white ;
+			margin-left: 10px ;
+			margin-top: -15px ;
+        }
+    }
+}
+
+/* Responsive*/
+
+@media 
+	screen 
+		and (max-width : 800px) {
+			header .iconenav{
+		    display: block ;
+			}
+						
+header {
+	ul {
+		float: none; 
+		position: absolute; 
+		width: 80% ;
+		padding-left: 12% ;
+		margin-top: -70px ;
+		margin-left: 10px ;
+		margin-right: 10px; 
+		display: none ;
+	}
+	
+		li {
+			text-align: center; 
+			display: block ;
+			padding: 2px ;
+			background-color:$color1;
+		}
+		
+.menu {
+	display: block ;
+}
+}}
+					

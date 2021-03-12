@@ -1,0 +1,70 @@
+$color1:#2DA07A;
+$color2:#9ED2C1;
+.MAuthor {
+	h3 {
+		text-align: center ;
+		color: $color1 ;
+		font-size: 25px ;
+		margin-bottom: 20px;
+    } 
+}
+input[type=text] {
+	padding: 10px; 
+	border: 1px solid #ccc; 
+	border-radius: 4px ;
+	box-sizing: border-box; 
+	margin-top: 2px ;
+	margin-bottom: 20px;
+} 
+input[type=submit] {
+	background-color: $color1; 
+	color: white ;
+	padding: 10px ;
+	width: 100px ;
+	border: none ;
+	border-radius: 30px; 
+	cursor: pointer ;
+	&:hover{
+		background-color: black;
+	}
+}
+
+#FORMULAIRE {
+	border-radius: 50px; 
+	background-color: $color2; 
+	padding: 40px ;
+	margin-left: 300px; 
+	margin-right: 300px ;
+	font-size: 20px ;
+    
+}
+.btn {
+	text-align: center ;
+} 
+.FRM {
+	display: grid; 
+	grid-template-columns: auto auto;
+} 
+.plus {
+	display: block ; }
+input,label {
+	margin: .2rem 0; } 
+#Date_birth {
+	width: 500px; 
+	height: 30px;
+} 
+#fullName {
+	width: 210px ;
+    
+} 
+#CIN {
+	width: 210px ;
+    
+} 
+div span{
+	color:red;
+}
+
+.FRM div{
+	margin-bottom: 10px;
+  }
