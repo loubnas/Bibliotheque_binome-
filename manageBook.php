@@ -64,7 +64,7 @@
                <li>
             </ul>                            	 	
     </header>
-    <form action="bookPHP.php" method="post">
+    <form action="bookPHP.php" method="POST">
         <content>
             <div>
                 <h2>Manage A Book</h2>
@@ -73,12 +73,13 @@
                 <div class="contentDiv">
                     <div class="miniContentDiv">
                         <label>Name :</label><br><br>
-                        <input type="text" value="<?=$bookName?>" id="NameBook" class="inptSelect"  placeholder="Enter a Name...">
+                        <input type="hidden" name="idBA" value="<?= $_GET["idBA"]?>">
+                        <input type="text" value="<?=$bookName?>" id="NameBook" class="inptSelect" name="nameBook"  placeholder="Enter a Name...">
                         <div> <span id ="ErreurNomBook"> </span> </div>
                     </div>
                     <div>
                         <label>Authors :</label><br><br>
-                        <select class="inptSelect" id="select">
+                        <select class="inptSelect" id="select" name="selectAuthor">
                             <option value="<?=$idAuthor?>"><?=$fullName?></option>
                             <?php
                                 $query="SELECT * FROM author";
@@ -94,12 +95,12 @@
                 <div class="contentDiv">
                     <div class="miniContentDiv">
                         <label>Date :</label><br><br>
-                        <input type="date" id="date" value="<?=$dateBook?>" class="inptSelect">
+                        <input type="date" id="date" value="<?=$dateBook?>" name="date_birth" class="inptSelect">
                         <div> <span id ="ErreurDate"> </span> </div>
                     </div>
                     <div>
                         <label>Price :</label><br><br>
-                        <input type="text" id="price" value="<?=$price?>" class="inptSelect" placeholder="Enter a Price...">
+                        <input type="text" id="price" value="<?=$price?>" class="inptSelect" name="price" placeholder="Enter a Price...">
                         <div> <span id ="ErreurPrice"></span> </div>
                     </div>
                 </div>
