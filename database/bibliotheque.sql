@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 12 mars 2021 à 16:14
+-- Généré le : lun. 15 mars 2021 à 11:03
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -34,15 +34,7 @@ CREATE TABLE IF NOT EXISTS `author` (
   `FullName` varchar(100) NOT NULL,
   `date_birth` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `author`
---
-
-INSERT INTO `author` (`id`, `cin`, `FullName`, `date_birth`) VALUES
-(1, 'HHH1', 'ilyass tahzima', '2021-03-09'),
-(2, 'HH2', 'SOUSSI Loubna', '2021-03-04');
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -58,17 +50,7 @@ CREATE TABLE IF NOT EXISTS `book` (
   `date` date NOT NULL,
   `image` varchar(300) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `book`
---
-
-INSERT INTO `book` (`id`, `nameBook`, `price`, `date`, `image`) VALUES
-(12, 'Book 3', 500, '2021-03-26', 'book3.jpg'),
-(13, 'Book 2', 123, '2021-03-17', 'book2.jpg'),
-(14, 'Book 1', 500, '2021-04-02', 'book1.jpg'),
-(15, 'Book 1113', 600, '2021-03-05', 'book6.jpg');
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -84,17 +66,24 @@ CREATE TABLE IF NOT EXISTS `bookauthor` (
   PRIMARY KEY (`id`),
   KEY `idBook` (`idBook`),
   KEY `iddAuthor` (`idAuthor`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
 
 --
--- Déchargement des données de la table `bookauthor`
+-- Structure de la table `users`
 --
 
-INSERT INTO `bookauthor` (`id`, `idBook`, `idAuthor`) VALUES
-(12, 12, 1),
-(13, 13, 2),
-(14, 14, 2),
-(15, 15, 2);
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fullName` varchar(120) NOT NULL,
+  `adresse` varchar(150) NOT NULL,
+  `number` int(11) NOT NULL,
+  `e-mail` varchar(150) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Contraintes pour les tables déchargées
