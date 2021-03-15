@@ -32,9 +32,14 @@ if(isset($_POST['btn'])){
 
       //Delete :
        if(isset($_GET['id'])){
+         $requeste="SELECT idBook FROM bookauthor WHERE idAuthor='".$_GET['id']."'";
+         $result=mysqli_query($connect,$requeste);
+         while($row=$result->fetch_assoc()){
+         $requete="DELETE FROM book WHERE id='".$row['idBook']."'";
+         $result=mysqli_query($connect,$requete);
+        }
          $query="DELETE FROM author WHERE  id= '".$_GET['id']."'";
          $result=mysqli_query($connect,$query);
-
        }
 
     

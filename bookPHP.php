@@ -43,12 +43,14 @@ if(isset($_POST['BTN'])){
         header('location:book.php');
     }
 }
+//DELETE :
 if(isset($_GET['idB'])){
     $requete="DELETE FROM book WHERE id=".$_GET['idB'];
     $result=mysqli_query($connect,$requete);
 }
+// UPDATE :
 if(isset($_POST['update'])){
-    $query="UPDATE book set nameBook='".$_POST["nameBook"]."', price=".$_POST["price"].", date='".$_POST["date_birth"]."', image='".$_POST["cover"]."' where id=".$_POST['idBA']."";
+   $query="UPDATE book set nameBook='".$_POST["nameBook"]."', price=".$_POST["price"].", date='".$_POST["date_birth"]."', image='".$_POST["cover"]."' where id=".$_POST['idBA']."";
    $result=mysqli_query($connect,$query);
    $requeste="UPDATE bookauthor set idAuthor=".$_POST["selectAuthor"]." where id=".$_POST['idBA']."";
    $result=mysqli_query($connect,$requeste);
