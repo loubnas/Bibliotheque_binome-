@@ -50,7 +50,7 @@
         <div class="tform">   
             <h3> Add an Author </h3>
         </div>
-        <form id="formulaire" method="post" action="authors.php">
+        <form id="formulaire" method="POST" action="authors.php">
             <div class="frm">
                 <div>
                     <label for="fullName" class="plus"> Ful-Name : </label> 
