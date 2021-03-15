@@ -36,7 +36,9 @@
             <li> <a href="gallery.php"> <span class="titlegallery">Gallery</span></a> </li>
             <li><a href="book.php"><span class="titlebooks">Books </span></a></li>
             <li > <a href="authors.php"><span class="titleauthors">Authors</span></a></li>
-            <li>
+            <li><a href="signUp.php"><input type="submit" value="Sign up" name="Sign up" ></a> </li> 
+            <li><input type="submit" value="Sign in" name="Sign in"> </li>
+        
          </ul>                            	 	
  </header>
 
