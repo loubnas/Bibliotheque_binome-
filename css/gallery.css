@@ -1,6 +1,9 @@
 .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   font-family: Corbel;
 }
 
@@ -18,6 +21,8 @@ select {
 }
 
 .test {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -36,8 +41,10 @@ input {
 }
 
 .container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: auto auto;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
   padding: 10px;
 }
 
@@ -62,8 +69,11 @@ label {
 }
 
 .myFooter div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .myFooter label {
   margin-top: 5px;
 }
@@ -74,35 +84,39 @@ label {
     display: unset;
     text-align: center;
   }
-
   .divSemiGenerale {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-
   .divMiniGenerale img {
     width: 95%;
     height: 70%;
   }
-
   .divMiniGenerale {
     margin-left: 5px;
   }
-
   .miniDiv {
     text-align: start;
   }
-
   label {
     margin-left: 0%;
   }
-
   .test {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-
   #btn {
     margin-left: 35%;
   }
-}/*# sourceMappingURL=gallery.css.map */
+}
+/*# sourceMappingURL=gallery.css.map */
