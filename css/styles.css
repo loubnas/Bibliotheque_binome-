@@ -14,41 +14,36 @@ header ul {
   float: right;
   margin-top: 10px;
   display: block;
-  margin-right: 40px;
 }
-
 header img {
   width: 200px;
   height: 200px;
   margin-top: -60px;
 }
-
 header li {
   display: inline-block;
   list-style: none;
 }
-
 header a {
   display: inline-block;
-  margin: 30px;
+  margin: 25px;
   margin-top: 10px;
   text-decoration: none;
   color: black;
   font-size: 22px;
 }
-
 header a:hover {
   color: #2DA07A;
 }
 header input[type=submit] {
-  background-color: #a2dac7;
+  background-color: #12b37d;
   color: white;
   padding: 5px;
   width: 100px;
-  border: none;
+  border: 1 solid;
+  border-color: white;
   border-radius: 20px;
   cursor: pointer;
-  margin-left: 4%;
 }
 
 .active {
@@ -69,12 +64,10 @@ header input[type=submit] {
 footer div {
   margin-top: 18px;
 }
-
 footer div img {
   margin-left: 10px;
   width: 30px;
 }
-
 footer div label {
   color: white;
   margin-left: 10px;
@@ -86,6 +79,7 @@ footer div label {
   header .iconenav {
     display: block;
   }
+
   header ul {
     float: none;
     position: absolute;
@@ -105,5 +99,4 @@ footer div label {
   header .menu {
     display: block;
   }
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
