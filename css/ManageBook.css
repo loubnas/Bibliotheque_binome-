@@ -1,11 +1,8 @@
 .contentDiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-left: 80px;
   margin-top: 20px;
 }
-
 .contentDiv div label {
   color: black;
   opacity: 100%;
@@ -43,13 +40,8 @@ label {
 }
 
 .contentDivPlus {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-bottom: 50px;
   margin-top: 20px;
   text-align: center;
@@ -80,5 +72,4 @@ label {
 
 div span {
   color: red;
-}
-/*# sourceMappingURL=ManageBook.css.map */
+}/*# sourceMappingURL=ManageBook.css.map */

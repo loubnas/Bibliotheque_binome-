@@ -15,7 +15,11 @@ header {
 	ul { 
 		float: right ;
 		margin-top: 10px ;
+<<<<<<< HEAD
 		display: block ; 
+=======
+		display: block ;
+>>>>>>> 343740390668732be1ca8dd90f8db76aadb8ce26
     }
 	img {
 		width: 200px; 
@@ -33,6 +37,7 @@ header {
 		text-decoration: none ;
 		color: black ;
 		font-size: 22px ;
+		
 
 		&:hover {
 			color:$color ;
@@ -40,18 +45,22 @@ header {
     }
 
 	input[type=submit] {
-		background-color: $color1 ;
+		background-color: #12b37d ;
 		color: white ;
 		padding: 5px ;
 		width: 100px ;
-		border: none ;
+		border: 1 solid  ;
+		border-color: white;
 		border-radius: 20px; 
 		cursor: pointer ;
+<<<<<<< HEAD
+=======
+	
+
+>>>>>>> 343740390668732be1ca8dd90f8db76aadb8ce26
 }
 }
-// #navcontenu{
-// 	margin-left: 150px;
-// }
+
 .active {
 	color: $color ;
 	text-decoration: underline ;

@@ -25,6 +25,7 @@ if(isset($_POST['btn'])){
        if($FULLname!="" && $CIN!="" && $Date_birth!=""){
          $query="INSERT INTO `author`(`cin`, `FullName`, `date_birth`) VALUES ('$CIN','$FULLname','$Date_birth')";
          $result=mysqli_query($connect,$query);
+         
         
        }
        header('location:authors.php');
