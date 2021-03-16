@@ -14,7 +14,6 @@ header ul {
   float: right;
   margin-top: 10px;
   display: block;
-  margin-right: 40px;
 }
 
 header img {
@@ -30,7 +29,7 @@ header li {
 
 header a {
   display: inline-block;
-  margin: 30px;
+  margin: 25px;
   margin-top: 10px;
   text-decoration: none;
   color: black;
@@ -40,6 +39,7 @@ header a {
 header a:hover {
   color: #2DA07A;
 }
+
 header input[type=submit] {
   background-color: #a2dac7;
   color: white;
@@ -48,7 +48,6 @@ header input[type=submit] {
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  margin-left: 4%;
 }
 
 .active {
