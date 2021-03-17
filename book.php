@@ -1,4 +1,10 @@
 <?php 
+session_start();
+if($_SESSION['email']){
+    echo"<style>#sign{visibility:hidden;}#log{visibility:visible;}</style>";    
+}else{
+    header('location:signIn.php');
+}
     include ("bookPHP.php");
     
  ?>
@@ -42,9 +48,9 @@
                <li> <a href="gallery.php"> <span class="titlegallery">Gallery</span></a> </li>
                <li><a href="book.php" class="active"><span class="titlebooks">Books </span></a></li>
                <li > <a href="authors.php"><span class="titleauthors">Authors</span></a></li>
-               <li><a href="signUp.php"><input type="submit" value="Sign up" name="Sign up" ></a> </li> 
-               <li><a href="signin.php"><input type="submit" value="Sign in" name="Sign in"></a> </li>
-        
+            <li id="sign"><a href="signUp.php"><input type="submit" value="Sign up" name="Sign up" ></a></li> 
+            <li id="sign"><a href="signIn.php"><input type="submit" value="Sign in" name="Sign in"></a></li>
+            <li id="log"><a href="deconnexion.php"><input type="submit" value="Log Out" name="Log Out"></a></li>
             </ul>                            	 	
     </header>
     <content>

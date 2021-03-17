@@ -11,7 +11,26 @@
 	height: 100%;
 	z-index: -1;
 }
-
+.btn1{
+	display: block;
+	width: 67%;
+	height: 50px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+	background-size: 200%;
+	font-size: 1.2rem;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin: 1rem 0;
+	cursor: pointer;
+	transition: .5s;
+}
+.btn1:hover{
+	background-position: right;
+}
 .container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -50,7 +69,6 @@ form{
     padding: 5px 0;
     border-bottom: 2px solid #d9d9d9;
 }
-
 .login-content .input-div.one{
 	margin-top: 0;
 }

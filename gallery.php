@@ -40,8 +40,9 @@
                <li> <a href="gallery.php" class="active"> <span class="titlegallery">Gallery</span></a> </li>
                <li><a href="book.php"><span class="titlebooks">Books </span></a></li>
                <li > <a href="authors.php"><span class="titleauthors">Authors</span></a></li>
-               <li><a href="signUp.php"><input type="submit" value="Sign up" name="Sign up" ></a> </li> 
-               <li><a href="signin.php"><input type="submit" value="Sign in" name="Sign in"></a> </li>
+                <li id="sign"><a href="signUp.php"><input type="submit" value="Sign up" name="Sign up" ></a></li> 
+                <li id="sign"><a href="signIn.php"><input type="submit" value="Sign in" name="Sign in"></a></li>
+                <li id="log"><a href="deconnexion.php"><input type="submit" value="Log Out" name="Log Out"></a></li>
             </ul>                            	 	
     </header>
      <content>
