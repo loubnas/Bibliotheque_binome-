@@ -34,11 +34,9 @@ include ("signInPHP.php");
 			<img src="images/bg.svg">
 		</div>
 		<div class="login-content">
-<<<<<<< HEAD
 			<form action="signIn.php" method="post">
-=======
 			<form action="">
->>>>>>> 76cb3ebb86cfbabc5a842f642d8df3b388b940e3
+
 				<img src="images/avatar.svg">
 				<h2 class="title">Welcome</h2>
            		<div class="input-div one">
@@ -65,16 +63,15 @@ include ("signInPHP.php");
                     	</div>
             	   </div>
             	</div>
-<<<<<<< HEAD
+
             	<input type="submit" name="login" class="btn" value="Login">
             </form>
             <a href="signUp.php"><input type="submit" class="btn1" value="Sign up"></a>
-=======
+
             	<input type="submit" class="btn" value="Login">
 				
             </form>
 			<a href="signUp.php"><input type="submit" class="btn1" value="signUp"></a>
->>>>>>> 76cb3ebb86cfbabc5a842f642d8df3b388b940e3
         </div>
     </div>
     <script type="text/javascript" src="main.js"></script>
