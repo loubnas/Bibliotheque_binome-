@@ -41,7 +41,7 @@
 </div>
  
 
-<form  id="formulaire" method="POST" action="signUP.php">
+<form  id="formulaire" method="POST" action="signUpPHP.php">
         <label class="mylabel"> Fullname </label>
         <input type="text" id="Fullname" name="Fullname" placeholder="Put your fullname.."> <br>
         <div>

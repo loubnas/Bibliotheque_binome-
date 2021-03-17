@@ -1,6 +1,12 @@
-<?php 
-    include ("connexion.php");
- ?>
+<?php
+session_start();
+if(empty($_SESSION['email'])){
+    echo"<style>#log{visibility:hidden;}#sign{visibility:visible;}</style>";    
+}else{
+    echo"<style>#sign{visibility:hidden;}#log{visibility:visible;}</style>";  
+}
+include ("connexion.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

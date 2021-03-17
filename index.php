@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(empty($_SESSION['email'])){
+    echo"<style>#log{visibility:hidden;}#sign{visibility:visible;}</style>";    
+}else{
+    echo"<style>#sign{visibility:hidden;}#log{visibility:visible;}</style>";  
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>

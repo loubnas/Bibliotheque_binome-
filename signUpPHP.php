@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include ("connexion.php"); 
 $ErreurFullname = $ErreurAdresse = $ErreurNumber =$ErreurEmail= $ErreurPassword="";
 
@@ -30,9 +31,15 @@ if(isset($_POST['Fullname'])){
 
      //INSERT :
      if($FULLname!="" &&  $Adresse!="" && $Number!="" && $Email!="" &&$Password!=""){
-        $query="INSERT INTO users(`fullName`, `adresse`, `number`, `e-mail`, `password`) VALUES ('$FULLname','$Adresse',$Number,'$Email','$Password')";
+        $query="INSERT INTO users(`fullName`, `adresse`, `number`, `email`, `pwd`) VALUES ('$FULLname','$Adresse',$Number,'$Email','$Password')";
         $result=mysqli_query($connect,$query);
+        if($result){
+            $_SESSION['email']=$Email;
             header('location:index.php');
+        }
+        else{
+            header('location:signUp.php');
+        }
     }
 
 

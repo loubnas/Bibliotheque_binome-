@@ -1,4 +1,5 @@
 <?php
+
 include ("signInPHP.php");
 ?>
 <!DOCTYPE html>
@@ -35,9 +36,13 @@ include ("signInPHP.php");
 		</div>
 		<div class="login-content">
 			<form action="signIn.php" method="post">
+<<<<<<< HEAD
 			<form action="">
 
 				<img src="images/avatar.svg">
+=======
+			<img src="images/avatar.svg">
+>>>>>>> bcc7f71914c1b7051396314d052c09bca6c44f96
 				<h2 class="title">Welcome</h2>
            		<div class="input-div one">
            		   <div class="i">
@@ -63,6 +68,7 @@ include ("signInPHP.php");
                     	</div>
             	   </div>
             	</div>
+<<<<<<< HEAD
 
             	<input type="submit" name="login" class="btn" value="Login">
             </form>
@@ -72,6 +78,11 @@ include ("signInPHP.php");
 				
             </form>
 			<a href="signUp.php"><input type="submit" class="btn1" value="signUp"></a>
+=======
+            	<input type="submit" name="login" class="btn" value="Login">
+            </form>
+            <a href="signUp.php"><input type="submit" class="btn1" value="Sign up"></a>
+>>>>>>> bcc7f71914c1b7051396314d052c09bca6c44f96
         </div>
     </div>
     <script type="text/javascript" src="main.js"></script>
