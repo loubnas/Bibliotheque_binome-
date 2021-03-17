@@ -32,7 +32,7 @@
 			<img src="images/bg.svg">
 		</div>
 		<div class="login-content">
-			<form action="index.html">
+			<form action="">
 				<img src="images/avatar.svg">
 				<h2 class="title">Welcome</h2>
            		<div class="input-div one">
@@ -54,7 +54,9 @@
             	   </div>
             	</div>
             	<input type="submit" class="btn" value="Login">
+				
             </form>
+			<a href="signUp.php"><input type="submit" class="btn1" value="signUp"></a>
         </div>
     </div>
     <script type="text/javascript" src="main.js"></script>

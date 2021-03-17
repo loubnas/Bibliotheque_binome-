@@ -1,8 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body .wave {
@@ -12,12 +11,10 @@ body .wave {
   height: 100%;
   z-index: -1;
 }
-
 body .image img {
   width: 500px;
   margin-right: 60%;
 }
-
 body #formulaire {
   border-radius: 2px;
   background-color: #e0e9e3;
@@ -28,36 +25,29 @@ body #formulaire {
   font-size: 20px;
   margin-top: -30%;
 }
-
 body input[type=text] {
   margin: 15px;
 }
-
 body input[type=number] {
   margin: 15px;
 }
-
 body input[type=email] {
   margin: 15px;
 }
-
 body input[type=password] {
   margin: 15px;
 }
-
 body input {
   width: 300px;
   height: 30px;
   font-family: "poppins", sans-serif;
 }
-
 body label {
   display: inline-block;
   width: 90px;
   text-align: left;
   font-family: "poppins", sans-serif;
 }
-
 body .btn {
   background-color: #34af86;
   color: white;
@@ -66,7 +56,6 @@ body .btn {
   cursor: pointer;
   width: 100%;
 }
-
 body .nm img {
   width: 86px;
   height: 116px;
@@ -74,10 +63,8 @@ body .nm img {
   margin-left: 73%;
   margin-bottom: 25%;
 }
-
 body div span {
   color: red;
   font-size: 15px;
   text-align: center;
-}
-/*# sourceMappingURL=signUp.css.map */
+}/*# sourceMappingURL=signUp.css.map */

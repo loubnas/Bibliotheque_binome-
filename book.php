@@ -128,7 +128,7 @@
                     <td><?php echo $row["FullName"] ?></td>
                     <td><?php echo $row["price"] ?></td>
                     <td><?php echo $row["date"] ?></td>
-                    <td><a href="<?php echo "manageBook.php?idBA=".$row["idBA"] ?>"><img src="images/edit-button.png" alt="Edit" class="icon"></a></td>
+                    <td><a href="<?php echo "manageBook.php?idB=".$row["idB"] ?>"><img src="images/edit-button.png" alt="Edit" class="icon"></a></td>
                     <td><a href="<?php echo "book.php?idB=".$row["idB"] ?>"><img src="images/delete-button.png" alt="Delete" class="icon" name="delete" ></td>
                 </tr>
             <?php    }?> 

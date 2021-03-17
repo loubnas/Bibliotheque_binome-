@@ -9,8 +9,7 @@ input[type=text] {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin-top: 2px;
   margin-bottom: 20px;
 }
@@ -24,7 +23,6 @@ input[type=submit] {
   border-radius: 30px;
   cursor: pointer;
 }
-
 input[type=submit]:hover {
   background-color: black;
 }
@@ -43,10 +41,8 @@ input[type=submit]:hover {
 }
 
 .FRM {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  grid-template-columns: auto auto;
 }
 
 .plus {
@@ -54,7 +50,7 @@ input[type=submit]:hover {
 }
 
 input, label {
-  margin: .2rem 0;
+  margin: 0.2rem 0;
 }
 
 #Date_birth {
@@ -76,5 +72,4 @@ div span {
 
 .FRM div {
   margin-bottom: 10px;
-}
-/*# sourceMappingURL=ManageAuthors.css.map */
+}/*# sourceMappingURL=ManageAuthors.css.map */
