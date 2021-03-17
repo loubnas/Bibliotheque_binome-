@@ -1,8 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .wave {
@@ -38,10 +37,8 @@
 }
 
 .container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 7rem;
   padding: 0 2rem;
 }
@@ -71,10 +68,8 @@ form {
 
 .login-content .input-div {
   position: relative;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 7% 93%;
-      grid-template-columns: 7% 93%;
+  grid-template-columns: 7% 93%;
   margin: 25px 0;
   padding: 5px 0;
   border-bottom: 2px solid #d9d9d9;
@@ -86,20 +81,13 @@ form {
 
 .i {
   color: #d9d9d9;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .i i {
-  -webkit-transition: .3s;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .input-div > div {
@@ -111,23 +99,20 @@ form {
   position: absolute;
   left: 10px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   color: #999;
   font-size: 18px;
-  -webkit-transition: .3s;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .input-div:before, .input-div:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   width: 0%;
   height: 2px;
   background-color: #38d39f;
-  -webkit-transition: .4s;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .input-div:before {
@@ -163,7 +148,7 @@ form {
   padding: 0.5rem 0.7rem;
   font-size: 1.2rem;
   color: #555;
-  font-family: 'poppins', sans-serif;
+  font-family: "poppins", sans-serif;
 }
 
 .input-div.pass {
@@ -176,8 +161,7 @@ a {
   text-decoration: none;
   color: #999;
   font-size: 0.9rem;
-  -webkit-transition: .3s;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 a:hover {
@@ -191,17 +175,33 @@ a:hover {
   border-radius: 25px;
   outline: none;
   border: none;
-  background-image: -webkit-gradient(linear, left top, right top, from(#32be8f), color-stop(#38d39f), to(#32be8f));
   background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
   background-size: 200%;
   font-size: 1.2rem;
   color: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   margin: 1rem 0;
   cursor: pointer;
-  -webkit-transition: .5s;
-  transition: .5s;
+  transition: 0.5s;
+}
+
+.btn1 {
+  display: block;
+  width: 67%;
+  height: 50px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+  background-size: 200%;
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 .btn:hover {
@@ -213,35 +213,34 @@ a:hover {
     grid-gap: 5rem;
   }
 }
-
 @media screen and (max-width: 1000px) {
   form {
     width: 290px;
   }
+
   .login-content h2 {
     font-size: 2.4rem;
     margin: 8px 0;
   }
+
   .img img {
     width: 400px;
   }
 }
-
 @media screen and (max-width: 900px) {
   .container {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
+
   .img {
     display: none;
   }
+
   .wave {
     display: none;
   }
+
   .login-content {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
-}
-/*# sourceMappingURL=signin.css.map */
+}/*# sourceMappingURL=signin.css.map */

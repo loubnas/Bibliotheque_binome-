@@ -50,10 +50,28 @@ if(isset($_GET['idB'])){
 }
 // UPDATE :
 if(isset($_POST['update'])){
-   $query="UPDATE book set nameBook='".$_POST["nameBook"]."', price=".$_POST["price"].", date='".$_POST["date_birth"]."', image='".$_POST["cover"]."' where id=".$_POST['idBA']."";
+   $query="UPDATE book set nameBook='".$_POST["nameBook"]."', price=".$_POST["price"].", date='".$_POST["date_birth"]."', image='".$_POST["cover"]."' where id=".$_POST['idB']."";
    $result=mysqli_query($connect,$query);
    $requeste="UPDATE bookauthor set idAuthor=".$_POST["selectAuthor"]." where id=".$_POST['idBA']."";
    $result=mysqli_query($connect,$requeste);
    header('location:book.php');
+ }
+//update authors
+ if(isset($_POST['addauthor'])){
+     $idBook=$_POST['idB'];
+     $author=$_POST['selectAuthor'];
+     $query="INSERT INTO `bookauthor`( `idBook`, `idAuthor`) VALUES ($idBook,$author)";
+      echo $query;
+     $result=mysqli_query($connect,$query);
+    //  header('location:book.php');
+    // echo $query;
+ }
+
+ if(isset($_GET['idba'])){
+    $idba=$_GET['idba']; 
+    $query="DELETE FROM `bookauthor` WHERE id=$idba";
+    $result=mysqli_query($connect,$query);
+    header('location:book.php');
+    
  }
 ?>
