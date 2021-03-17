@@ -1,3 +1,6 @@
+<?php
+include ("signInPHP.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,14 +20,13 @@
 		</svg> 
 		<img src="images/LOGO.png">
 		<ul id="navcontenu" class=" " vue="" >
-				<li > <a href="index.php" class="active">Home</a> </li>
-				<li> <a href="gallery.php"> <span class="titlegallery">Gallery</span></a> </li>
-				<li><a href="book.php"><span class="titlebooks">Books </span></a></li>
-				<li > <a href="authors.php"><span class="titleauthors">Authors</span></a></li>
-				<li><a href="signUp.php"><input type="submit" value="Sign up" name="Sign up" ></a> </li> 
-				<li><a href="signin.php"><input type="submit" value="Sign in" name="Sign in"></a> </li>
-			
-			</ul>                            	 	
+			<li > <a href="index.php">Home</a> </li>
+			<li> <a href="gallery.php"> <span class="titlegallery">Gallery</span></a> </li>
+			<li><a href="book.php"><span class="titlebooks">Books </span></a></li>
+			<li > <a href="authors.php"><span class="titleauthors">Authors</span></a></li>
+			<li><a href="signUp.php"><input type="submit" value="Sign up" name="Sign up" ></a> </li> 
+			<li><a href="signIn.php"><input type="submit" value="Sign in" name="Sign in"></a> </li>
+		</ul>                            	 	
 	</header>
 	<img class="wave" src="images/wave.png">
 	<div class="container">
@@ -32,7 +34,7 @@
 			<img src="images/bg.svg">
 		</div>
 		<div class="login-content">
-			<form action="index.html">
+			<form action="signIn.php" method="post">
 				<img src="images/avatar.svg">
 				<h2 class="title">Welcome</h2>
            		<div class="input-div one">
@@ -41,7 +43,10 @@
            		   </div>
            		   <div class="div">
            		   		<h5>Username</h5>
-           		   		<input type="text" class="input">
+           		   		<input type="text" name="email" class="input">
+						<div>
+                        	<span id ="erreur"><?= $ErreurEmail ?> </span>
+                    	</div>
            		   </div>
            		</div>
            		<div class="input-div pass">
@@ -50,11 +55,15 @@
            		   </div>
            		   <div class="div">
            		    	<h5>Password</h5>
-           		    	<input type="password" class="input">
+           		    	<input type="password" name="pwd" class="input">
+						<div>
+                        	<span id ="erreur"><?= $ErreurPwd ?> </span>
+                    	</div>
             	   </div>
             	</div>
-            	<input type="submit" class="btn" value="Login">
+            	<input type="submit" name="login" class="btn" value="Login">
             </form>
+            <a href="signUp.php"><input type="submit" class="btn1" value="Sign up"></a>
         </div>
     </div>
     <script type="text/javascript" src="main.js"></script>
