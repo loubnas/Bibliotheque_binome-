@@ -61,10 +61,8 @@ if(isset($_POST['update'])){
      $idBook=$_POST['idB'];
      $author=$_POST['selectAuthor'];
      $query="INSERT INTO `bookauthor`( `idBook`, `idAuthor`) VALUES ($idBook,$author)";
-      echo $query;
      $result=mysqli_query($connect,$query);
-    //  header('location:book.php');
-    // echo $query;
+     header('location:book.php');
  }
 
  if(isset($_GET['idba'])){

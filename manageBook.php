@@ -6,12 +6,12 @@ if(empty($_SESSION['email'])){
     include ("connexion.php");
     if(isset($_GET['idB'])){
         $idB=$_GET['idB'];
-        $query="SELECT * FROM `bookauthor` where id=$idB";
+        $query="SELECT * FROM `bookauthor` where idBook=$idB";
         $result=mysqli_query($connect,$query);
         while($row=$result->fetch_assoc()){
             $idA=$row['idAuthor'];
         }
-        $requette="SELECT bookauthor.id as idBA,book.id as idB,author.id as idA,author.FullName,book.nameBook,book.price,book.date,book.image FROM author,book,bookauthor WHERE author.id=bookauthor.idAuthor AND book.id=bookauthor.idBook";
+        $requette="SELECT bookauthor.id as idBA,book.id as idB,author.id as idA,author.FullName,book.nameBook,book.price,book.date,book.image FROM author,book,bookauthor WHERE author.id=bookauthor.idAuthor AND book.id=bookauthor.idBook AND book.id=$idB AND author.id=$idA";
         $result=mysqli_query($connect,$requette);
         while($row=$result->fetch_assoc()){
             $idAuthor=$row['idA'];
