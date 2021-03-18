@@ -1,5 +1,4 @@
 <?php
-
 include ("signInPHP.php");
 ?>
 <!DOCTYPE html>

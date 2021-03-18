@@ -1,9 +1,7 @@
 <?php 
 session_start();
-if($_SESSION['email']){
-    echo"<style>#sign{visibility:hidden;}#log{visibility:visible;}</style>";    
-}else{
-    header('location:signIn.php');
+if(empty($_SESSION['email'])){
+    header('location:signIn.php');   
 }
     include ("authorPHP.php");
 ?>
@@ -47,9 +45,14 @@ if($_SESSION['email']){
             <li> <a href="gallery.php"> <span class="titlegallery">Gallery</span></a> </li>
             <li><a href="book.php"><span class="titlebooks">Books </span></a></li>
             <li > <a href="authors.php" class="active"><span class="titleauthors">Authors</span></a></li>
-            <li id="sign"><a href="signUp.php"><input type="submit" value="Sign up" name="Sign up" ></a></li> 
-            <li id="sign"><a href="signIn.php"><input type="submit" value="Sign in" name="Sign in"></a></li>
-            <li id="log"><a href="deconnexion.php"><input type="submit" value="Log Out" name="Log Out"></a></li>
+            <?php 
+                if(empty($_SESSION['email'])){
+                    echo"<li><a href='signUp.php'><input type='submit' value='Sign up' name='Sign up' ></a></li>";
+                    echo"<li><a href='signIn.php'><input type='submit' value='Sign in' name='Sign in'></a></li>"; 
+                }else{
+                    echo"<li><a href='deconnexion.php'><input type='submit' value='Log Out' name='Log Out'></a></li>";  
+                }
+            ?>
          </ul>                            	 	
  </header>
 
