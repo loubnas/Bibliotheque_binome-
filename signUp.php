@@ -35,9 +35,9 @@
  </header>
 <body>
 
-<img class="wave" src="images/wave.png">
+<img class="wave" src="images/wave.png" alt="wave image">
 <div class="image">
-  <img src="images/form.svg">
+  <img src="images/form.svg" alt="this is a undraw educator">
 </div>
 <div class="nm">
   <img src="images/undraw_educator_oxfm.svg">

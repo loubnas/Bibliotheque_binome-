@@ -8,9 +8,11 @@ session_start();
 	<title>Acceuil </title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css"> 
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="BOOKS LIBRARY" content="LIBRARY OF BOOKS" >
 	<meta name="keywords" content="LIBRARY, BOOKS, GALLERY,AUTHORS">
 	<meta name="description" content="THIS IS A LIBRARY OF BOOKS ">
+   
 	
 </head>
 <body>	
@@ -37,7 +39,7 @@ session_start();
         <rect y="30" width="100" height="20"></rect>
         <rect y="60" width="100" height="20"></rect>
       </svg> 
- 	<img src="images/LOGO.png">
+ 	<img src="images/LOGO.png" alt="this is a logo">
 	<ul id="navcontenu" class=" " vue="" >
             <li > <a href="index.php" class="active">Home</a> </li>
             <li> <a href="gallery.php"> <span class="titlegallery">Gallery</span></a> </li>
@@ -65,7 +67,7 @@ session_start();
             </p> 
         </div>
         <div class="div2">
-            <img src="images/pic.png">
+            <img src="images/pic.png" alt="background">
         </div>
     </div>
 </body>

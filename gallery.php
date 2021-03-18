@@ -38,7 +38,7 @@ include ("connexion.php");
             <rect y="30" width="100" height="20"></rect>
             <rect y="60" width="100" height="20"></rect>
           </svg>	 
-        <img src="images/LOGO.png">
+        <img src="images/LOGO.png" alt="this is a logo ">
        <ul id="navcontenu" class=" " vue="" >
                <li > <a href="index.php">Home</a> </li>
                <li> <a href="gallery.php" class="active"> <span class="titlegallery">Gallery</span></a> </li>
@@ -101,19 +101,19 @@ include ("connexion.php");
     </content> 
     <footer class="myFooter">
             <div>
-                <img src="images/iconPhone.png" >
+                <img src="images/iconPhone.png" alt="icone for phone">
                 <label>+21256874894</label>
             </div>
             <div>
-                <img src="images/iconEmail.png" >
+                <img src="images/iconEmail.png"  alt="icone for email">
                 <label>BOOK.LIBRARY@gmail.com</label>
             </div>
             <div>
-                <img src="images/iconFacebook.png" >
+                <img src="images/iconFacebook.png" alt="icone for facebook">
                 <label>BOOK.LIBRARY</label>
             </div>
             <div>
-                <img src="images/iconInstagrame.png" >
+                <img src="images/iconInstagrame.png" alt="icone for instagram" >
                 <label>BOOK.LIBRARY</label>
             </div>
     </footer>

@@ -21,7 +21,7 @@ include ("signInPHP.php");
 			<rect y="30" width="100" height="20"></rect>
 			<rect y="60" width="100" height="20"></rect>
 		</svg> 
-		<img src="images/LOGO.png">
+		<img src="images/LOGO.png" alt="this is a logo">
 		<ul id="navcontenu" class=" " vue="" >
 			<li > <a href="index.php">Home</a> </li>
 			<li> <a href="gallery.php"> <span class="titlegallery">Gallery</span></a> </li>
@@ -31,15 +31,15 @@ include ("signInPHP.php");
 			<li><a href="signIn.php"><input type="submit" value="Sign in" name="Sign in"></a> </li>
 		</ul>                            	 	
 	</header>
-	<img class="wave" src="images/wave.png">
+	<img class="wave" src="images/wave.png" alt="ware image">
 	<div class="container">
 		<div class="img">
-			<img src="images/bg.svg">
+			<img src="images/bg.svg" alt="bg images">
 		</div>
 		<div class="login-content">
 			<form action="signIn.php" method="post">
 			<form action="">
-				<img src="images/avatar.svg">
+				<img src="images/avatar.svg" alt="this is an avatar">
 				<h2 class="title">Welcome</h2>
            		<div class="input-div one">
            		   <div class="i">

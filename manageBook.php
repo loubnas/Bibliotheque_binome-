@@ -61,7 +61,7 @@ if(empty($_SESSION['email'])){
             <rect y="30" width="100" height="20"></rect>
             <rect y="60" width="100" height="20"></rect>
           </svg>	 
-        <img src="images/LOGO.png">
+        <img src="images/LOGO.png" alt="this is a logo ">
        <ul id="navcontenu" class=" " vue="" >
                <li > <a href="index.php">Home</a> </li>
                <li> <a href="gallery.php"> <span class="titlegallery">Gallery</span></a> </li>

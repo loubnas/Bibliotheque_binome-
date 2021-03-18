@@ -27,7 +27,7 @@ if(isset($_GET['id']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Acceuil </title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css"> 
-	<link rel="stylesheet" type="text/css" href="css/ManageAuthors.css">
+	<link rel="stylesheet" type="text/css" href="css/ManageAuthors.css"> 
     <meta name="MANAGE AUTHORS " content="LIBRARY OF BOOKS" >
 	<meta name="keywords" content="LIBRARY, BOOKS, GALLERY,AUTHORS">
 	<meta name="description" content="THIS IS A LIBRARY OF BOOKS ">
@@ -57,7 +57,7 @@ if(isset($_GET['id']))
         <rect y="30" width="100" height="20"></rect>
         <rect y="60" width="100" height="20"></rect>
       </svg> 
- 	<img src="images/LOGO.png">
+ 	<img src="images/LOGO.png" alt="this is a logo ">
 	<ul id="navcontenu" class=" " vue="" >
             <li > <a href="index.php" >Home</a> </li>
             <li> <a href="gallery.php"> <span class="titlegallery">Gallery</span></a> </li>
