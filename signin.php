@@ -10,6 +10,9 @@ include ("signInPHP.php");
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="SIGNIN" content="LIBRARY OF BOOKS" >
+	<meta name="keywords" content="LIBRARY, BOOKS, GALLERY,AUTHORS">
+	<meta name="description" content="THIS IS A LIBRARY OF BOOKS ">
 </head>
 <body>
 	<header>	

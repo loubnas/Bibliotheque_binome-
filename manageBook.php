@@ -33,6 +33,9 @@ if(empty($_SESSION['email'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/book.css" rel="stylesheet">
+    <meta name=" MANAGE BOOKS LIBRARY" content="LIBRARY OF BOOKS" >
+	<meta name="keywords" content="LIBRARY, BOOKS, GALLERY,AUTHORS">
+	<meta name="description" content="THIS IS A LIBRARY OF BOOKS ">
     <title>Document</title>
 </head>
 <body>

@@ -15,6 +15,9 @@ if(empty($_SESSION['email'])){
 	<title>Acceuil </title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css"> 
 	<link rel="stylesheet" type="text/css" href="css/authors.css">
+    <meta name="AUTHORS" content="LIBRARY OF BOOKS" >
+	<meta name="keywords" content="LIBRARY, BOOKS, GALLERY,AUTHORS">
+	<meta name="description" content="THIS IS A LIBRARY OF BOOKS ">
 </head>
 <body>	
     <script>

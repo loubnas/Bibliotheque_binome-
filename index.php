@@ -8,6 +8,10 @@ session_start();
 	<title>Acceuil </title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css"> 
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+    <meta name="BOOKS LIBRARY" content="LIBRARY OF BOOKS" >
+	<meta name="keywords" content="LIBRARY, BOOKS, GALLERY,AUTHORS">
+	<meta name="description" content="THIS IS A LIBRARY OF BOOKS ">
+	
 </head>
 <body>	
 	<script>
