@@ -140,7 +140,7 @@ include ("bookPHP.php");
                     <td><?php echo $row["price"] ?></td>
                     <td><?php echo $row["date"] ?></td>
                     <td><a href="<?php echo "manageBook.php?idB=".$row["idB"] ?>"><img src="images/edit-button.png" alt="Edit" class="icon"></a></td>
-                    <td><a href="<?php echo "book.php?idB=".$row["idB"] ?>"><img src="images/delete-button.png" alt="Delete" class="icon" name="delete" ></td>
+                    <td><a href="<?php echo "book.php?idB=".$row["idB"] ?>" onclick="return confirm('Are you sure you want to Remove this Book?');"><img src="images/delete-button.png" alt="Delete" class="icon" name="delete" ></a></td>
                 </tr>
             <?php    }?> 
            

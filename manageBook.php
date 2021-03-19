@@ -154,7 +154,7 @@ if(empty($_SESSION['email'])){
                     <td><?php echo $row["id"] ?></td>
                     <td><?php echo $row["idBook"] ?></td>
                     <td><?php echo $row["idAuthor"] ?></td>
-                    <td><a href="<?php echo "bookPHP.php?idba=".$row["id"] ?>"><img src="images/delete-button.png" alt="Delete" class="icon" name="delete" ></a></td>
+                    <td><a href="<?php echo "bookPHP.php?idba=".$row["id"] ?>" onclick="return confirm('Are you sure you want to Remove this Book?');"><img src="images/delete-button.png" alt="Delete" class="icon" name="delete" ></a></td>
                 </tr>
             <?php    }?> 
            

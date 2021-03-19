@@ -108,11 +108,15 @@ if(empty($_SESSION['email'])){
                 $query="SELECT * FROM author";
                 $result=mysqli_query($connect,$query);
                
-                while($row=$result->fetch_assoc()){
-                echo '<tr><td>'.$row["FullName"].'</td><td>'.$row["cin"].'</td><td>'.$row["date_birth"].'</td><td ><a href="manageAuthor.php?id='.$row["id"].'"><img src="images/edit-button.png" alt="Edit" class="icon"></a></td><td><a href="authors.php?id='.$row["id"].'"><img src="images/delete-button.png" alt="Delete" class="icon" name="delete" ></a></td></tr>';
-                }
-                
-            ?>
+                while($row=$result->fetch_assoc()){?>
+                <tr>
+                        <td><?php echo $row["FullName"] ?></td>
+                        <td><?php echo $row["cin"] ?></td>
+                        <td><?php echo $row["date_birth"] ?></td>
+                        <td><a href="<?php echo "manageAuthor.php?id=".$row["id"] ?>"><img src="images/edit-button.png" alt="Edit" class="icon"></a></td>
+                        <td><a href="<?php echo "authors.php?id=".$row["id"] ?>" onclick="return confirm('Are you sure you want to Remove this Author?');"><img src="images/delete-button.png" alt="Delete" class="icon" name="delete" ></a></td>
+                    </tr> 
+            <?php    }?>
           
             
 
