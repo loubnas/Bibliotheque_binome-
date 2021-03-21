@@ -1,8 +1,8 @@
 <?php 
-session_start();
-if(empty($_SESSION['email'])){
-    header('location:signIn.php');   
-}
+    session_start();
+    if(empty($_SESSION['email'])){
+        header('location:signIn.php');   
+    }
     include ("connexion.php");
     if(isset($_GET['idB'])){
         $idB=$_GET['idB'];
@@ -36,25 +36,10 @@ if(empty($_SESSION['email'])){
     <meta name=" MANAGE BOOKS LIBRARY" content="LIBRARY OF BOOKS" >
 	<meta name="keywords" content="LIBRARY, BOOKS, GALLERY,AUTHORS">
 	<meta name="description" content="THIS IS A LIBRARY OF BOOKS ">
-    <title>Document</title>
+    <title>Manage Books</title>
 </head>
 <body>
-    <script>
-        function nav(){
-            var nav = document.getElementById("navcontenu");
-            if(nav.getAttribute("vue")=="active")
-            {
-                document.getElementById("navcontenu").classList.remove("menu");
-                nav.setAttribute("vue","");
-            }else
-            {
-                nav.setAttribute("vue","active");
-                document.getElementById("navcontenu").classList.add("menu");
-
-            }
-			 }
-    </script>
-    
+    <script src="js/nav.js"></script>
     <header>
         <svg class="iconenav" viewBox="0 0 100 80" width="40" height="40" fill="#2DA07A" onclick="nav()">
             <rect width="100" height="20"></rect>
@@ -62,12 +47,12 @@ if(empty($_SESSION['email'])){
             <rect y="60" width="100" height="20"></rect>
           </svg>	 
         <img src="images/LOGO.png" alt="this is a logo ">
-       <ul id="navcontenu" class=" " vue="" >
-               <li > <a href="index.php">Home</a> </li>
-               <li> <a href="gallery.php"> <span class="titlegallery">Gallery</span></a> </li>
-               <li><a href="book.php" class="active"><span class="titlebooks">Books </span></a></li>
-               <li > <a href="authors.php"><span class="titleauthors">Authors</span></a></li>
-               <?php 
+        <ul id="navcontenu" class=" " vue="" >
+            <li > <a href="index.php">Home</a> </li>
+            <li> <a href="gallery.php"> <span class="titlegallery">Gallery</span></a> </li>
+            <li><a href="book.php" class="active"><span class="titlebooks">Books </span></a></li>
+            <li > <a href="authors.php"><span class="titleauthors">Authors</span></a></li>
+            <?php 
                 if(empty($_SESSION['email'])){
                     echo"<li><a href='signUp.php'><input type='submit' value='Sign up' name='Sign up' ></a></li>";
                     echo"<li><a href='signIn.php'><input type='submit' value='Sign in' name='Sign in'></a></li>"; 
@@ -75,7 +60,7 @@ if(empty($_SESSION['email'])){
                     echo"<li><a href='deconnexion.php'><input type='submit' value='Log Out' name='Log Out'></a></li>";  
                 }
             ?>
-            </ul>                            	 	
+        </ul>                            	 	
     </header>
     <form action="bookPHP.php" method="POST">
         <content>
@@ -96,7 +81,6 @@ if(empty($_SESSION['email'])){
                         <div> <span id ="ErreurDate"> </span> </div>
                     </div>
                 </div>
-
                 <div class="contentDiv">
                     <div class="miniContentDiv">
                         <label>Price :</label><br><br>
@@ -111,7 +95,6 @@ if(empty($_SESSION['email'])){
                         </div>
                     </div>
                 </div>
-
                 <div class="contentDiv">
                     <input type="submit" name="update" value="Submit" id="bntAddBook" class="inptSelect btn" ><br>
                 </div>
@@ -119,49 +102,44 @@ if(empty($_SESSION['email'])){
                     <label>Authors :</label><br><br>
                     <select class="inptSelect" id="select" name="selectAuthor">
                         <option value="<?=$idAuthor?>"><?=$fullName?></option>
-                    <?php
-                        $query="SELECT * FROM author";
-                        $result=mysqli_query($connect,$query);
-                        while($row=$result->fetch_assoc()){
-                        echo"<option value='".$row["id"]."'>".$row["FullName"]."</option>";
-                            }
-                    ?>
+                        <?php
+                            $query="SELECT * FROM author";
+                            $result=mysqli_query($connect,$query);
+                            while($row=$result->fetch_assoc()){
+                            echo"<option value='".$row["id"]."'>".$row["FullName"]."</option>";
+                                }
+                        ?>
                     </select>
                     <div> 
                         <span id ="ErreurSelect"></span> 
                     </div>
-                    
                     <div class="bouton">
                         <input type="submit" value="Add" name="addauthor" id="btn1">
-                  </div>
-
+                    </div>
                 </div> 
             </div>
-
             <table>
-            <tr bgcolor="#9ED2C1">
-                <td> id</td>
-                <td > idBook </td>
-                <td> idAuthor</td>
-                <td> Delete </td>
-            </tr>
-            <?php
-                $id=$_GET["idB"];
-                 $query="SELECT * FROM `bookauthor` WHERE idBook=$id";
-                $result=mysqli_query($connect,$query);
-                while($row=$result->fetch_assoc()){ ?>
-                <tr>
-                    <td><?php echo $row["id"] ?></td>
-                    <td><?php echo $row["idBook"] ?></td>
-                    <td><?php echo $row["idAuthor"] ?></td>
-                    <td><a href="<?php echo "bookPHP.php?idba=".$row["id"] ?>" onclick="return confirm('Are you sure you want to Remove this Book?');"><img src="images/delete-button.png" alt="Delete" class="icon" name="delete" ></a></td>
+                <tr bgcolor="#9ED2C1">
+                    <td> id</td>
+                    <td > idBook </td>
+                    <td> idAuthor</td>
+                    <td> Delete </td>
                 </tr>
-            <?php    }?> 
-           
-        </table>
+                <?php
+                    $id=$_GET["idB"];
+                    $query="SELECT * FROM `bookauthor` WHERE idBook=$id";
+                    $result=mysqli_query($connect,$query);
+                    while($row=$result->fetch_assoc()){ ?>
+                    <tr>
+                        <td><?php echo $row["id"] ?></td>
+                        <td><?php echo $row["idBook"] ?></td>
+                        <td><?php echo $row["idAuthor"] ?></td>
+                        <td><a href="<?php echo "bookPHP.php?idba=".$row["id"] ?>" onclick="return confirm('Are you sure you want to Remove this Book?');"><img src="images/delete-button.png" alt="Delete" class="icon" name="delete" ></a></td>
+                    </tr>
+                <?php    }?> 
+            </table>
         </content>
     </form>
-    
 </body>
 <script src="manageBook.js"></script>
 </html>

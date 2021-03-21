@@ -1,10 +1,10 @@
 <?php
-include ("signInPHP.php");
+	include ("signInPHP.php");
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
+	<title>Sign In</title>
 	<link rel="stylesheet" type="text/css" href="css/signin.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css"> 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
@@ -15,6 +15,7 @@ include ("signInPHP.php");
 	<meta name="description" content="THIS IS A LIBRARY OF BOOKS ">
 </head>
 <body>
+    <script src="js/nav.js"></script>
 	<header>	
 		<svg class="iconenav" viewBox="0 0 100 80" width="40" height="40" fill="#2DA07A" onclick="nav()">
 			<rect width="100" height="20"></rect>
@@ -70,6 +71,6 @@ include ("signInPHP.php");
             <a href="signUp.php"><input type="submit" class="btn1" value="Sign up"></a>
         </div>
     </div>
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

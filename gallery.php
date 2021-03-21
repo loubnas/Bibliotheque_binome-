@@ -1,7 +1,8 @@
 <?php
-session_start();
-include ("connexion.php");
+    session_start();
+    include ("connexion.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,25 +14,11 @@ include ("connexion.php");
     <meta name="GALLERY " content=" ALL BOOKS IN THE GALLERY" >
 	<meta name="keywords" content="LIBRARY, BOOKS, GALLERY,AUTHORS">
 	<meta name="description" content="THIS IS A LIBRARY OF BOOKS ">
-    <title>Document</title>
-    <script src="gallery.js"></script>
+    <title>Gallery</title>
+    <script src="js/gallery.js"></script>
 </head>
 <body>
-    <script>
-        function nav(){
-            var nav = document.getElementById("navcontenu");
-            if(nav.getAttribute("vue")=="active")
-            {
-                document.getElementById("navcontenu").classList.remove("menu");
-                nav.setAttribute("vue","");
-            }else
-            {
-                nav.setAttribute("vue","active");
-                document.getElementById("navcontenu").classList.add("menu");
-
-            }
-			 }
-    </script>
+    <script src="js/nav.js"></script>
     <header>
         <svg class="iconenav" viewBox="0 0 100 80" width="40" height="40" fill="#2DA07A" onclick="nav()">
             <rect width="100" height="20"></rect>
@@ -39,22 +26,22 @@ include ("connexion.php");
             <rect y="60" width="100" height="20"></rect>
           </svg>	 
         <img src="images/LOGO.png" alt="this is a logo ">
-       <ul id="navcontenu" class=" " vue="" >
+        <ul id="navcontenu" class=" " vue="" >
                <li > <a href="index.php">Home</a> </li>
                <li> <a href="gallery.php" class="active"> <span class="titlegallery">Gallery</span></a> </li>
                <li><a href="book.php"><span class="titlebooks">Books </span></a></li>
                <li > <a href="authors.php"><span class="titleauthors">Authors</span></a></li>
                <?php 
-                if(empty($_SESSION['email'])){
-                    echo"<li><a href='signUp.php'><input type='submit' value='Sign up' name='Sign up' ></a></li>";
-                    echo"<li><a href='signIn.php'><input type='submit' value='Sign in' name='Sign in'></a></li>"; 
-                }else{
-                    echo"<li><a href='deconnexion.php'><input type='submit' value='Log Out' name='Log Out'></a></li>";  
-                }
-            ?>
-            </ul>                            	 	
+                    if(empty($_SESSION['email'])){
+                        echo"<li><a href='signUp.php'><input type='submit' value='Sign up' name='Sign up' ></a></li>";
+                        echo"<li><a href='signIn.php'><input type='submit' value='Sign in' name='Sign in'></a></li>"; 
+                    }else{
+                        echo"<li><a href='deconnexion.php'><input type='submit' value='Log Out' name='Log Out'></a></li>";  
+                    }
+                ?>
+        </ul>                            	 	
     </header>
-     <content>
+    <content>
         <div class="search">
             <div claas="choose_author">
                 <label id="label">Choose An Author :</label><br>
@@ -66,7 +53,7 @@ include ("connexion.php");
                             while($row=$result->fetch_assoc()){
                                echo"<option value='".$row["FullName"]."'>".$row["FullName"]."</option>";
                             }
-                            ?>
+                    ?>
                 </select>
             </div>
             <div>
@@ -80,7 +67,6 @@ include ("connexion.php");
                 </div>
             </div>
         </div>
-
         <div class="container">
                 <?php
                     $query="SELECT author.FullName,book.nameBook,book.price,book.date, book.image FROM author,book,bookauthor WHERE author.id=bookauthor.idAuthor AND book.id=bookauthor.idBook";
@@ -97,7 +83,6 @@ include ("connexion.php");
                         </div>
                 <?php   }   ?>
         </div>
-
     </content> 
     <footer class="myFooter">
             <div>

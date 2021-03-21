@@ -1,9 +1,9 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-
 body .wave {
   position: fixed;
   bottom: 0;
@@ -67,4 +67,5 @@ body div span {
   color: red;
   font-size: 15px;
   text-align: center;
-}/*# sourceMappingURL=signUp.css.map */
+}
+/*# sourceMappingURL=signUp.css.map */

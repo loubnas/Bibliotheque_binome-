@@ -36,12 +36,6 @@ CREATE TABLE IF NOT EXISTS `author` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
---
--- Déchargement des données de la table `author`
---
-
-INSERT INTO `author` (`id`, `cin`, `FullName`, `date_birth`) VALUES
-(4, 'HH5', 'loubna', '2021-03-13');
 
 -- --------------------------------------------------------
 
@@ -59,13 +53,6 @@ CREATE TABLE IF NOT EXISTS `book` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
---
--- Déchargement des données de la table `book`
---
-
-INSERT INTO `book` (`id`, `nameBook`, `price`, `date`, `image`) VALUES
-(26, 'Book 3', 123, '2021-03-19', 'book1.jpg');
-
 -- --------------------------------------------------------
 
 --
@@ -81,13 +68,6 @@ CREATE TABLE IF NOT EXISTS `bookauthor` (
   KEY `idBook` (`idBook`),
   KEY `iddAuthor` (`idAuthor`)
 ) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `bookauthor`
---
-
-INSERT INTO `bookauthor` (`id`, `idBook`, `idAuthor`) VALUES
-(26, 26, 4);
 
 -- --------------------------------------------------------
 
@@ -105,28 +85,6 @@ CREATE TABLE IF NOT EXISTS `users` (
   `pwd` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `users`
---
-
-INSERT INTO `users` (`id`, `fullName`, `adresse`, `number`, `email`, `pwd`) VALUES
-(1, 'TAHZIMA Ilyass', '23 Bloc 14', 606060606, 'tahzima.i@gmail.com', 'ilyass123'),
-(2, 'SOUSSI Loubna', 'adr1', 50505005, 'loubna123@gmail.com', 'loubna123'),
-(3, 'tahzima', 'adr2', 1231203, 'ilyass.t.1997@gmail.com', 'ilyass'),
-(4, 'test', 'test', 213123123, 'test@gmail.com', 'test'),
-(5, 'test', 'iudza', 12312412, 'teste@gmail.com', 'teste'),
-(6, 'lb', 'lb', 12312312, 'lb@gmail.com', 'lb123'),
-(7, 'il', 'il', 1231231, 'il@gmail.com', 'il123'),
-(8, 'kljds', 'jfpos', 1231232, 'loubna123@gmail.com', 'AZERTY'),
-(9, 'ijvoids', 'ojfepzoje', 2312412, 'tah.i@gmail.com', 'AZERT'),
-(10, 'ayoub', 'adr3', 142412, 'ayoub@gmail.com', 'ayoub'),
-(11, 'klfbd', 'lkjlk', 12, 'loubna123@gmail.com', 'AZE'),
-(12, 'klfbd', 'lkjlk', 12, 'loubna123@gmail.com', 'AZE'),
-(13, 'klfd', 'lk', 12, 'ilyass.t.1997@gmail.com', '213'),
-(14, 'Book 3', 'lk', 2141, 'ilyass.t.1997@gmail.com', 'tetet'),
-(15, 'Book 3', 'lk', 3242, 'ilyass.t.1997@gmail.com', 'efze'),
-(16, 'Book 3', 'lk', 2131, 'ilyass.t.1997@gmail.com', 'ZAEaze');
 
 --
 -- Contraintes pour les tables déchargées

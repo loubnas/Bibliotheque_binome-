@@ -31,15 +31,12 @@ input {
 	margin-top: $marginTop;
 	margin-bottom: $marginBottom;
 	margin-right: 2px ;
-	// height: 18px ;
-	}
+}
 .divMiniGenerale{ 
 	padding:20px;
 	font-size: 20px;
 	margin-left: 20%;
-	// text-align: center;
-	}
-
+}
 .container{
 	display: grid;
 	grid-template-columns: auto auto;
@@ -49,13 +46,10 @@ label{
 	text-align: center;
 	 margin-left: 2%;
 }
-
 .miniDiv {
-	
 	margin-left: 12% ;
 	padding-top: 10px;
-	
-	}
+}
 #btn {
 	text-align: $alingtext;
 	background-color:$BACKGROUND;
@@ -64,41 +58,36 @@ label{
 	border-radius: 20px ;
 	color:$COLOR;
 	cursor: pointer;
-	}
+}
 .myFooter{ 
 	div {
 		display:flex;
     } 
 	label {
 		margin-top: 5px;
-    }}
+    }
+}
 /* Responsive*/
 @media screen and(max-width:800px){
 	.search{
 		display: unset;
 		text-align: center;
 	}
-	
 	.divSemiGenerale{ 
 		display:flex;
 		flex-direction: column;
-		
-		}
+	}
 	.divMiniGenerale img {
     width:95%;
 	height: 70%;
-	
-	
 	}
 	.divMiniGenerale{
 	margin-left: 5px;	
 	}
 	.miniDiv {
 		text-align: start;
-	
 		}
 		label{
-			
 			margin-left: 0%;
 		}
 	.test{

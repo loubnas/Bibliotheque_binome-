@@ -3,42 +3,56 @@ body {
   background-size: 100vw;
   background-repeat: no-repeat;
 }
+
 body .titlebooks {
   color: #79CA7E;
 }
+
 body .titleauthors {
   color: #79CA7E;
 }
+
 body .titlegallery {
   color: #79CA7E;
 }
+
 body .generalDiv {
   margin-top: -50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 body .generalDiv .div1 p {
   width: 400px;
   line-height: 180%;
 }
+
 body .generalDiv .div1 h2 {
   width: 400px;
   margin-bottom: 50px;
   margin-top: 100px;
 }
+
 body .div2 img {
   width: 45vw;
   margin-left: 120px;
 }
+
 body .MYLIB {
   color: #79CA7E;
   padding-left: 15px;
   font-family: Palatino Linotype;
 }
+
 body .div1 h2 {
   font-size: 50px;
   margin-top: 10px;
 }
+
 body .div1 p {
   font-size: 20px;
   margin-top: -5%;
@@ -51,7 +65,10 @@ body .div1 p {
     background-image: none;
   }
   body .generalDiv {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-left: 5%;
   }
   body .div2 img {
@@ -67,4 +84,5 @@ body .div1 p {
   body .titlegallery {
     color: black;
   }
-}/*# sourceMappingURL=index.css.map */
+}
+/*# sourceMappingURL=index.css.map */

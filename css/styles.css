@@ -2,14 +2,12 @@
   padding: 0px;
   margin: 0px;
 }
-
 .iconenav {
   display: none;
   float: right;
   margin: 20px 30px 0px 0px;
   cursor: pointer;
 }
-
 header ul {
   float: right;
   margin-top: 10px;
@@ -35,7 +33,6 @@ header a {
 header a:hover {
   color: #2DA07A;
 }
-
 header input[type=submit] {
   background-color: #12b37d;
   color: white;
@@ -46,12 +43,10 @@ header input[type=submit] {
   border-radius: 20px;
   cursor: pointer;
 }
-
 .active {
   color: #2DA07A;
   text-decoration: underline;
 }
-
 .myFooter {
   background-image: url("../images/footer.png");
   position: absolute;
@@ -61,7 +56,6 @@ header input[type=submit] {
   padding-top: 60px;
   margin-left: -7px;
 }
-
 footer div {
   margin-top: 18px;
 }
@@ -74,13 +68,11 @@ footer div label {
   margin-left: 10px;
   margin-top: -15px;
 }
-
 /* Responsive*/
 @media screen and (max-width: 800px) {
   header .iconenav {
     display: block;
   }
-
   header ul {
     float: none;
     position: absolute;
@@ -100,4 +92,5 @@ footer div label {
   header .menu {
     display: block;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+/*# sourceMappingURL=styles.css.map */

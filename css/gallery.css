@@ -1,9 +1,11 @@
 .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   font-family: Corbel;
 }
-
 select {
   font-family: Corbel;
   font-size: 15px;
@@ -12,15 +14,14 @@ select {
   width: 200px;
   border: 2px #2DA07A solid;
 }
-
 .inputprice {
   margin-right: 20px;
 }
-
 .test {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
-
 input {
   text-align: center;
   border: 2px #2DA07A solid;
@@ -28,29 +29,26 @@ input {
   margin-bottom: 10px;
   margin-right: 2px;
 }
-
 .divMiniGenerale {
   padding: 20px;
   font-size: 20px;
   margin-left: 20%;
 }
-
 .container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: auto auto;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
   padding: 10px;
 }
-
 label {
   text-align: center;
   margin-left: 2%;
 }
-
 .miniDiv {
   margin-left: 12%;
   padding-top: 10px;
 }
-
 #btn {
   text-align: center;
   background-color: #2DA07A;
@@ -60,49 +58,53 @@ label {
   color: white;
   cursor: pointer;
 }
-
 .myFooter div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .myFooter label {
   margin-top: 5px;
 }
-
 /* Responsive*/
 @media screen and (max-width: 800px) {
   .search {
     display: unset;
     text-align: center;
   }
-
   .divSemiGenerale {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-
   .divMiniGenerale img {
     width: 95%;
     height: 70%;
   }
-
   .divMiniGenerale {
     margin-left: 5px;
   }
-
   .miniDiv {
     text-align: start;
   }
-
   label {
     margin-left: 0%;
   }
-
   .test {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-
   #btn {
     margin-left: 35%;
   }
-}/*# sourceMappingURL=gallery.css.map */
+}
+/*# sourceMappingURL=gallery.css.map */

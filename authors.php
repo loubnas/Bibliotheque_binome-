@@ -1,8 +1,8 @@
 <?php 
-session_start();
-if(empty($_SESSION['email'])){
-    header('location:signIn.php');   
-}
+    session_start();
+    if(empty($_SESSION['email'])){
+        header('location:signIn.php');   
+    }
     include ("authorPHP.php");
 ?>
 
@@ -12,7 +12,7 @@ if(empty($_SESSION['email'])){
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Acceuil </title>
+	<title>Authors</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css"> 
 	<link rel="stylesheet" type="text/css" href="css/authors.css">
     <meta name="AUTHORS" content="LIBRARY OF BOOKS" >
@@ -20,30 +20,16 @@ if(empty($_SESSION['email'])){
 	<meta name="description" content="THIS IS A LIBRARY OF BOOKS ">
 </head>
 <body>	
-    <script>
-        function nav(){
-            var nav = document.getElementById("navcontenu");
-            if(nav.getAttribute("vue")=="active")
-            {
-                document.getElementById("navcontenu").classList.remove("menu");
-                nav.setAttribute("vue","");
-            }else
-            {
-                nav.setAttribute("vue","active");
-                document.getElementById("navcontenu").classList.add("menu");
-
-            }
-			 }
-    </script>
-<!-- header -->
- <header>
-    <svg class="iconenav" viewBox="0 0 100 80" width="40" height="40" fill="#2DA07A" onclick="nav()">
-        <rect width="100" height="20"></rect>
-        <rect y="30" width="100" height="20"></rect>
-        <rect y="60" width="100" height="20"></rect>
-      </svg> 	 
- 	<img src="images/LOGO.png" alt="this is a logo">
-	<ul id="navcontenu" class=" " vue="" >
+    <script src="js/nav.js"></script>
+    <!-- header -->
+    <header>
+        <svg class="iconenav" viewBox="0 0 100 80" width="40" height="40" fill="#2DA07A" onclick="nav()">
+            <rect width="100" height="20"></rect>
+            <rect y="30" width="100" height="20"></rect>
+            <rect y="60" width="100" height="20"></rect>
+        </svg> 	 
+        <img src="images/LOGO.png" alt="this is a logo">
+        <ul id="navcontenu" class=" " vue="" >
             <li > <a href="index.php" >Home</a> </li>
             <li> <a href="gallery.php"> <span class="titlegallery">Gallery</span></a> </li>
             <li><a href="book.php"><span class="titlebooks">Books </span></a></li>
@@ -56,10 +42,9 @@ if(empty($_SESSION['email'])){
                     echo"<li><a href='deconnexion.php'><input type='submit' value='Log Out' name='Log Out'></a></li>";  
                 }
             ?>
-         </ul>                            	 	
- </header>
-
- <!-- end header -->
+        </ul>                            	 	
+    </header>
+    <!-- end header -->
     <main>
         <div class="tform">   
             <h3> Add an Author </h3>
@@ -90,12 +75,9 @@ if(empty($_SESSION['email'])){
                 <input type="submit"  name="btn" value="Add">
             </div>
         </form>  
-
-
         <div class="ttable">   
             <h3> Manage an Author </h3>
         </div>
-
         <table>
             <tr bgcolor="#9ED2C1">
                 <td > Full-Name </td>
@@ -103,28 +85,20 @@ if(empty($_SESSION['email'])){
                 <td> Date of birth</td>
                 <td colspan="2"> Manage a Author </td>
             </tr>
-            
             <?php
                 $query="SELECT * FROM author";
                 $result=mysqli_query($connect,$query);
-               
                 while($row=$result->fetch_assoc()){?>
                 <tr>
-                        <td><?php echo $row["FullName"] ?></td>
-                        <td><?php echo $row["cin"] ?></td>
-                        <td><?php echo $row["date_birth"] ?></td>
-                        <td><a href="<?php echo "manageAuthor.php?id=".$row["id"] ?>"><img src="images/edit-button.png" alt="Edit" class="icon"></a></td>
-                        <td><a href="<?php echo "authors.php?id=".$row["id"] ?>" onclick="return confirm('Are you sure you want to Remove this Author?');"><img src="images/delete-button.png" alt="Delete" class="icon" name="delete" ></a></td>
-                    </tr> 
+                    <td><?php echo $row["FullName"] ?></td>
+                    <td><?php echo $row["cin"] ?></td>
+                    <td><?php echo $row["date_birth"] ?></td>
+                    <td><a href="<?php echo "manageAuthor.php?id=".$row["id"] ?>"><img src="images/edit-button.png" alt="Edit" class="icon"></a></td>
+                    <td><a href="<?php echo "authors.php?id=".$row["id"] ?>" onclick="return confirm('Are you sure you want to Remove this Author?');"><img src="images/delete-button.png" alt="Delete" class="icon" name="delete" ></a></td>
+                </tr> 
             <?php    }?>
-          
-            
-
         </table>
-
     </main>
-
-
 </body>
 
 </html>
